@@ -1,10 +1,14 @@
 # nRF52_FM_Shield
 MML-based FM Synthesizer sequencer for Nordic nRF52 ported from https://github.com/lipoyang/FM_Shield
 
+## Preparation
 
-* To build with gcc
+Setup Nordic's nRF5x SDK and its related tools. I checked with SDK on Windows10.
+https://devzone.nordicsemi.com/tutorials/7/
 
-Modify the part of linker of Makefile.common in <nRF5x_SDK_Dir>/components/toolchain/gcc like this below to
+## To build with gcc
+
+First, modify the part of linker related description in Makefile.common at <nRF5x_SDK_Dir>/components/toolchain/gcc like this below to
 link C++ generated objects;
 (Change "-" line to "+")
 
@@ -17,8 +21,7 @@ link C++ generated objects;
     	$(NO_ECHO)$(SIZE) $@
     	-@echo ''
 
-
-Place the directory nRF52_MMLPlayer under <nRF5x_SDK_Dir> examples\peripheral\
+Next, place the directory nRF52_MMLPlayer under <nRF5x_SDK_Dir> examples\peripheral\
 
 And just build like other examples in the SDK.
 
