@@ -4,7 +4,7 @@ MML-based FM Synthesizer sequencer for Nordic nRF52 ported from https://github.c
 ## Preparation
 
 Setup Nordic's nRF5x SDK and its related tools. I checked with SDK on Windows10.
-https://devzone.nordicsemi.com/tutorials/7/
+Please refer to the official instruction in https://devzone.nordicsemi.com/tutorials/7/
 
 ## To build with gcc
 
