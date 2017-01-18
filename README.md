@@ -8,14 +8,14 @@ Modify the part of linker of Makefile.common in <nRF5x_SDK_Dir>/components/toolc
 link C++ generated objects;
 (Change "-" line to "+")
 
-\# Link object files
-%.out:
-\	@echo Linking target: $@
-\-	$(NO_ECHO)$(CC) -Wl,-Map=$(@:.out=.map) $(LDFLAGS) $^ $(LIB_FILES) -lm -o $@
-\+	$(NO_ECHO)$(CXX) -Wl,-Map=$(@:.out=.map) $(LDFLAGS) $^ $(LIB_FILES) -lm -o $@
-\	-@echo ''
-\	$(NO_ECHO)$(SIZE) $@
-\	-@echo ''
+    # Link object files
+    %.out:
+    	@echo Linking target: $@
+    -	$(NO_ECHO)$(CC) -Wl,-Map=$(@:.out=.map) $(LDFLAGS) $^ $(LIB_FILES) -lm -o $@
+    +	$(NO_ECHO)$(CXX) -Wl,-Map=$(@:.out=.map) $(LDFLAGS) $^ $(LIB_FILES) -lm -o $@
+    	-@echo ''
+    	$(NO_ECHO)$(SIZE) $@
+    	-@echo ''
 
 
 Place the directory nRF52_MMLPlayer under <nRF5x_SDK_Dir> examples\peripheral\
