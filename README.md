@@ -8,7 +8,7 @@ Please refer to the official instruction in https://devzone.nordicsemi.com/tutor
 
 ## To build with gcc
 
-First, modify the part of linker related description in Makefile.common at <nRF5x_SDK_Dir>/components/toolchain/gcc like this below to
+First, modify the part of linker related description in Makefile.common at (nRF5x_SDK_Dir)/components/toolchain/gcc like this below to
 link C++ generated objects;
 (Change "-" line to "+")
 
@@ -21,7 +21,7 @@ link C++ generated objects;
     	$(NO_ECHO)$(SIZE) $@
     	-@echo ''
 
-Next, place the directory nRF52_MMLPlayer under <nRF5x_SDK_Dir> examples\peripheral\
+Next, place the directory nRF52_MMLPlayer under (nRF5x_SDK_Dir)\examples\peripheral\
 
 And just build like other examples in the SDK.
 
